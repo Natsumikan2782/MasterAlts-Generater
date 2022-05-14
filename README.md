@@ -1,3 +1,4 @@
 # MasterAlts-Generater
 
->まだ途中 https://masteralts.com/このサイトのGen
+>まだ途中
+>>`https://masteralts.com/`このサイトのGen
