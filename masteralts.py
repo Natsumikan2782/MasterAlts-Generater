@@ -1,6 +1,6 @@
-import os,requests,json,re,time
+import requests,json,re,time
 
-apikey = os.environ['key']
+apikey = "自分のAPIKEYを今すぐ入れろ"
 url = f"https://2captcha.com/res.php?key={apikey}&action=getbalance"
 
 def getMoney():
@@ -21,9 +21,9 @@ def getUrl():
   ourl=f"http://2captcha.com/in.php?key={apikey}&method=userrecaptcha&version=v3&action=verify&min_score=0.3&googlekey=6Lde6mYUAAAAAADDO372WogUwpZb17QmZbAMRTRr&pageurl={match.group()}"
 
   verify = requests.post(ourl)
-  suuji = re.sub(r"\D", "",verify.text)
+  crypto = re.sub(r"\D", "",verify.text)
   
-  zurl=f"http://2captcha.com/res.php?key={apikey}&action=get&json=1&id={suuji}"
+  zurl=f"http://2captcha.com/res.php?key={apikey}&action=get&json=1&id={crypto}"
   
   print("Captcha開始")
   
